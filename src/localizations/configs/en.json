@@ -1,91 +1,43 @@
 {
   "commands": {
-    "translate": {
-      "name": "translate",
-      "description": "Translate the text to the specified language.",
-      "success": "Translated ${from}  → ${to}"
-    },
-    "send": {
-      "name": "send",
-      "description": "Directly send text in another language.",
-      "success": {
-        "title": "Sent!",
-        "description": "Check it out: ${url}",
-        "footer": "[this message will disappear in ${time}s...]",
-        "delete": "Delete"
-      }
-    },
-    "replicas": {
-      "name": "replicas",
-      "description": "Manage replicas.",
+    "settings": {
+      "name": "settings",
+      "description": "Manage server settings.",
       "options": {
-        "source": {
-          "name": "source",
-          "description": "The channel whose messages will be translated."
-        },
-        "target": {
-          "name": "target",
-          "description": "The channel where the translated messages should be sent."
-        },
-        "language": {
-          "name": "language",
-          "description": "The language to translate to."
-        }
-      },
-      "sub": {
-        "add": {
-          "name": "add",
-          "description": "Create a translation joint between two channels.",
-          "success": "Created a translation joint: 🌐 <#${source}> → ${language} <#${target}>.",
-          "errors": {
-            "alreadyExists": "A translation joint with the same settings already exists. Please check </${name}:${id}>.",
-            "differentGuilds": "The source and target channels must be in the same guild."
+        "channel": {
+          "name": "channel",
+          "description": "Sets the channel in which questions of the day will be sent.",
+          "options": {
+            "target": {
+              "name": "target",
+              "description": "The channel in which QotD will be asked."
+            }
           }
         },
-        "remove": {
-          "name": "remove",
-          "description": "Remove a replica.",
-          "success": "Removed the translation joint: 🌐 <#${source}> → ${language} <#${target}>.",
-          "errors": {
-            "notFound": "There is no active translation joint with the current settings. Please check </${name}:${id}>."
+        "moderationchannel": {
+          "name": "moderationchannel",
+          "description": "Sets the channel in which QotDs will be moderated.",
+          "options": {
+            "target": {
+              "name": "target",
+              "description": "If set, QotD suggestions will be sent to this channel for review."
+            }
           }
         },
-        "list": {
-          "name": "list",
-          "description": "List all replicas.",
-          "title": "Replicas:",
-          "errors": {
-            "noReplicas": "There are no replicas. Get started with </${name}:${id}>!",
-            "cannotSendMessage": "⚠ Messages cannot be sent to the target of some replicas."
+        "ping": {
+          "name": "ping",
+          "description": "Sets the role that'll get pinged when QotDs are asked.",
+          "options": {
+            "role": {
+              "name": "role",
+              "description": "If set, this role will be pinged when QotDs are asked."
+            }
           }
         }
       }
-    }
-  },
-  "context": {
-    "translate": {
-      "name": "Translate",
-      "footer": "pro tip: this feature uses the language defined in your discord settings."
-    },
-    "send": {
-        "name": "Translate and send"
     }
   },
   "common": {
-    "options": {
-      "text": {
-        "name": "text",
-        "description": "The text to translate."
-      },
-      "to": {
-        "name": "to",
-        "description": "The language to translate to."
-      },
-      "from": {
-        "name": "from",
-        "description": "The language to translate from."
-      }
-    },
     "errors": {
       "noText": "This message is empty!",
       "missingPermission": "oops! I don't have permission to do that, please check that you've used the correct invite link!",

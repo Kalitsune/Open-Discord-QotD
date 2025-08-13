@@ -1,7 +1,6 @@
 //ClientReady event
 const { Events, ActivityType } = require('discord.js');
 const { deployCommands } = require('../interactions/deploy.js');
-const translation_driver = require('../../translations/translations.js')
 
 let verbose = false;
 module.exports = {
@@ -22,9 +21,9 @@ module.exports = {
         // Greet the user
         console.log(`Ready! Serving ${client.commands.size} commands as ${client.user.tag}`);
 
-        console.log(`Invite me using: https://discord.com/api/oauth2/authorize?client_id=${client.application.id}&permissions=2684371968&scope=bot`)
+        console.log(`Invite me using: https://discord.com/api/oauth2/authorize?client_id=${client.application.id}&permissions=378493996032&scope=bot`)
 
-        client.user.setActivity(`Translating with ${translation_driver.name}.`, {type: ActivityType.Custom});
+        client.user.setActivity('Coming up with new interesting dilemmas...', {type: ActivityType.Custom});
     }
 }
 

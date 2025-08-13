@@ -1,0 +1,38 @@
+{
+  "name": "open-discord-qotd",
+  "version": "1.0.0",
+  "description": "Handy discord bot that provides daily \"Question of the day\"s allowing suggestions from the community and AI question providers when none is availablew",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kalitsune/Open-Discord-QotD.git"
+  },
+  "keywords": [
+    "discord",
+    "discord-bot",
+    "bot",
+    "community",
+    "fun",
+    "ai",
+    "server"
+  ],
+  "author": "Kalitsune (git@kalitsune.net)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Kalitsune/Open-Discord-QotD/issues"
+  },
+  "homepage": "https://github.com/Kalitsune/Open-Discord-QotD#readme",
+  "dependencies": {
+    "discord.js": "^14.21.0",
+    "dotenv": "^17.2.1",
+    "dotenv-parse-variables": "^2.0.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
